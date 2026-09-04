@@ -1,0 +1,9 @@
+[project]
+name = "unreasonable-extensibility-sim"
+version = "0.1.0"
+description = "The technique lattice and constraint migration of a legacy-hardware inference stack, threshold amplification under a multidimensional budget, and the saturation and decline of the deployable frontier"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "matplotlib>=3.8",
+]
