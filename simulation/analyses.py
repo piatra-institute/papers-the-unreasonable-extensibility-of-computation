@@ -200,6 +200,10 @@ def run_lattice() -> dict:
         if "int8_kv" in lat["necessary_techniques"] and lat["n_viable"] > 0:
             kv_floor = round(float(f), 2)
             break
+    # exact: the cache becomes necessary once the floor exceeds what the stack
+    # runs at without it; the loop above only finds the next 0.01 above that
+    kv_floor_exact = next(r["tokens_per_second"] for r in supported["rows"]
+                          if r["subset"] == ["q4_weights", "streaming", "vfpu"])
     # sensitivity of the supported-console verdict to the stipulated bandwidth
     bandwidth_rows = []
     global STICK_MB_S
@@ -250,6 +254,7 @@ def run_lattice() -> dict:
         "scalar_mac_per_s_millions": SCALAR_OPS_PER_S / 1e6,
         "stick_mb_s": STICK_MB_S, "vfpu_speedup": VFPU_SPEEDUP,
         "int8_kv_necessary_above_floor": kv_floor,
+        "int8_kv_necessary_above_floor_exact": kv_floor_exact,
         "bandwidth_sensitivity": bandwidth_rows,
         "streamed_mb_per_token": max(q4["weights_mb"]
                                      - (USABLE_MB - RUNTIME_STATE_MB), 0.0),

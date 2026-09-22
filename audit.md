@@ -2,6 +2,14 @@
 
 Dated log of editorial passes and verification runs. Newest first.
 
+## 2026-09-22 — prose revision
+
+Prose revision against the house standards. No computation or conclusion changed.
+  - Manuscript rewritten paragraph by paragraph; abstract cut from about 490 to 257 words, prose from about 5,050 to about 3,800 words. 'rather than' from twenty-five instances to none; meta-commentary and epigrams removed; section titles made descriptive.
+  - Stated more precisely: the floor above which the 8-bit cache becomes necessary is 0.456 tokens per second (the text gave 0.46, the next 0.01 grid step), now computed exactly in `simulation/analyses.py`; the overtaking time is 25.4 years (the text said 'in year 25').
+  - Figure 2(b) axis-label overlap fixed; all figure titles rewritten; figures regenerated (26 invariants pass).
+  - Build now carries an input-hash manifest. References and claims remain in their legacy state (inline bibliography, no bound ledger), unchanged by this pass.
+
 ## 2026-09-04 — v1, complete
 
 Scope: the whole paper, simulation, and evidence base, from the seed chat to the built PDF.

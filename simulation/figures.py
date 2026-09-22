@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import numpy as np
 import matplotlib
+import matplotlib.ticker
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -60,7 +61,7 @@ def plot_lattice(res: dict, path: str) -> None:
     ax.set_xticklabels(["fp32", "fp16", "int8", "four-bit\nblocks"],
                        fontsize=8)
     ax.set_ylabel("weights, MB", fontsize=8.5)
-    ax.set_title("a. no representation fits outright", fontsize=9.5,
+    ax.set_title("a. weight memory by representation", fontsize=9.5,
                  color=INK, loc="left")
     _style(ax)
 
@@ -82,7 +83,7 @@ def plot_lattice(res: dict, path: str) -> None:
     ax.invert_xaxis()
     ax.set_xlabel("bits per weight", fontsize=9)
     ax.set_ylabel("seconds per token", fontsize=8.5)
-    ax.set_title("b. compression moves the constraint, then stops paying",
+    ax.set_title("b. time per token by bit width",
                  fontsize=9.5, color=INK, loc="left")
     ax.legend(fontsize=7.2, frameon=False, loc="lower left")
     _style(ax)
@@ -107,7 +108,7 @@ def plot_lattice(res: dict, path: str) -> None:
                        f"On the earlier revision, "
                        f"{L['legacy']['n_viable']} of {n_s}.",
             fontsize=7.6, color=INK, ha="center")
-    ax.set_title("c. the capability is a conjunction", fontsize=9.5,
+    ax.set_title("c. techniques in viable configurations", fontsize=9.5,
                  color=INK, loc="left")
     _style(ax)
     ax.grid(False)
@@ -132,7 +133,7 @@ def plot_thresholds(res: dict, path: str) -> None:
             ms=3.2, label="capabilities crossing the budget")
     ax.set_xlabel("year", fontsize=9)
     ax.set_ylabel("share of the series maximum", fontsize=8.5)
-    ax.set_title("a. the same history, two series", fontsize=9.5, color=INK,
+    ax.set_title("a. efficiency gains and capability crossings", fontsize=9.5, color=INK,
                  loc="left")
     ax.legend(fontsize=7.2, frameon=False, loc="upper left")
     _style(ax)
@@ -151,9 +152,10 @@ def plot_thresholds(res: dict, path: str) -> None:
     ax.set_xscale("log")
     ax.set_xticks(m)
     ax.set_xticklabels([f"{x:g}x" for x in m])
+    ax.xaxis.set_minor_locator(matplotlib.ticker.NullLocator())
     ax.set_xlabel("median distance from the budget at the outset", fontsize=9)
     ax.set_ylim(0, 1.85)
-    ax.set_title("b. amplification needs the budget to bite", fontsize=9.5,
+    ax.set_title("b. amplification by distance from budget", fontsize=9.5,
                  color=INK, loc="left")
     ax.legend(fontsize=6.8, frameon=False, loc="upper left")
     _style(ax)
@@ -168,11 +170,11 @@ def plot_thresholds(res: dict, path: str) -> None:
     oy = hard["overtake_year"]
     if oy is not None:
         ax.axvline(oy, color=GRAY, lw=0.9, ls=":")
-        ax.text(oy + 1, 3, f"overtaken in\nyear {oy:.0f}", fontsize=7.4,
+        ax.text(oy + 1, 3, f"overtaken after\n{oy:.1f} years", fontsize=7.4,
                 color=GRAY)
     ax.set_xlabel("year", fontsize=9)
     ax.set_ylabel("task families within budget", fontsize=8.5)
-    ax.set_title("c. when the old machine passes the new one", fontsize=9.5,
+    ax.set_title("c. fixed device against a faster device", fontsize=9.5,
                  color=INK, loc="left")
     ax.legend(fontsize=7.0, frameon=False, loc="upper left")
     _style(ax)
@@ -196,7 +198,7 @@ def plot_decay(res: dict, path: str) -> None:
             label="deployable, interest waning")
     ax.set_xlabel("year", fontsize=9)
     ax.set_ylabel("artifacts, five-deep stack", fontsize=8.5)
-    ax.set_title("a. the frontier that grows is not the one you can run",
+    ax.set_title("a. known and deployable artifacts",
                  fontsize=9.5, color=INK, loc="left")
     ax.legend(fontsize=7.2, frameon=False, loc="upper left")
     _style(ax)
@@ -211,15 +213,15 @@ def plot_decay(res: dict, path: str) -> None:
     ax.axhline(0.5, color=GRAY, lw=0.9, ls=":")
     ax.axvline(D["depth_below_half"], color=GRAY, lw=0.9, ls=":")
     ax.text(D["depth_below_half"] + 0.3, 0.72,
-            f"half the stock is\nunrunnable at depth "
+            f"deployable share below\n0.5 from depth "
             f"{D['depth_below_half']}", fontsize=7.4, color=GRAY)
     ax.axvline(D["stack_depth"], color=AMBER, lw=1.1)
-    ax.text(D["stack_depth"] + 0.3, 0.05, "the console stack", fontsize=7.4,
+    ax.text(D["stack_depth"] + 0.3, 0.05, "console stack", fontsize=7.4,
             color=AMBER)
     ax.set_xlabel("components a stack depends on", fontsize=9)
     ax.set_ylabel("share of known artifacts still runnable", fontsize=8.5)
     ax.set_ylim(0, 1.02)
-    ax.set_title("b. depth, not age, is what kills it", fontsize=9.5,
+    ax.set_title("b. deployable share by stack depth", fontsize=9.5,
                  color=INK, loc="left")
     ax.legend(fontsize=7.2, frameon=False, loc="upper right")
     _style(ax)
@@ -235,7 +237,7 @@ def plot_decay(res: dict, path: str) -> None:
             color=GRAY)
     ax.scatter([D["stack_depth"]], [D["critical_interval_years_stack"]],
                s=60, color=AMBER, zorder=5)
-    ax.annotate(f"a five-deep stack needs each part\nto survive "
+    ax.annotate(f"five-component stack:\nmean component life "
                 f"{D['critical_interval_years_stack']:.0f} years",
                 xy=(D["stack_depth"], D["critical_interval_years_stack"]),
                 xytext=(5.4, 55), fontsize=7.2, color=AMBER,
@@ -245,7 +247,7 @@ def plot_decay(res: dict, path: str) -> None:
     ax.set_ylim(18, 900)
     ax.set_ylabel("required mean life of each component, years",
                   fontsize=8.5)
-    ax.set_title("c. what preservation would actually cost", fontsize=9.5,
+    ax.set_title("c. required component lifetime", fontsize=9.5,
                  color=INK, loc="left")
     _style(ax)
 

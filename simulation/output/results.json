@@ -64,6 +64,7 @@
     "stick_mb_s": 8.0,
     "vfpu_speedup": 3.2,
     "int8_kv_necessary_above_floor": 0.46,
+    "int8_kv_necessary_above_floor_exact": 0.455959,
     "bandwidth_sensitivity": [
       {
         "stick_mb_s": 4.0,
