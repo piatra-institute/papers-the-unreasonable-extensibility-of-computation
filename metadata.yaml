@@ -7,7 +7,7 @@ created: 2026-09
 date: September 2026
 paper_dir: paper
 has_simulation: true
-claims_target: results.json
+claims_target: claim-ledger
 repo: git@github.com:piatra-institute/papers-the-unreasonable-extensibility-of-computation.git
 github: https://github.com/piatra-institute/papers-the-unreasonable-extensibility-of-computation
 status: published

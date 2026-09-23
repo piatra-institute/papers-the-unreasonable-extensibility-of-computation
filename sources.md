@@ -100,3 +100,8 @@ Wigner, E. P. (1960). The unreasonable effectiveness of mathematics in the natur
 
 Wolpert, D. H., and Macready, W. G. (1997). No free lunch theorems for optimization. *IEEE Transactions on Evolutionary Computation*, 1(1), 67--82.
 : Crossref, DOI 10.1109/4235.585893.
+
+## Structured bibliography (2026-09-23)
+
+The inline reference list was migrated to references.yaml (CSL) and in-text citations to Pandoc [@id] syntax. Entries with DOIs were resolved through doi.org content negotiation (Crossref, or DataCite for the four arXiv preprints) and checked for year, title and authors; titles returned in capitals or with appended reprint notes (Hutter, Moor, Piccinini 2008, Moore, Wigner, Sherry and Thompson) were restored to their published form. The model card (technology2026, huggingface.co/tiiuae/Falcon-H1-Tiny-90M-Instruct) and the runtime repository (thatblend2026, github.com/thatblend/LLMPSP) were entered by hand from their URLs; the Hugging Face API reports 91,131,072 parameters, the figure behind the 91.1 million used in the arithmetic. Source claims in claims.yaml were checked against abstracts retrieved from Crossref, DataCite or OpenAlex, the full text of Sherry and Thompson (author copy at ide.mit.edu), Moor's article (author-hosted copy) and the runtime README.
+Checking Sherry and Thompson's text showed that 14 percent of all families, not of the remainder, improve transformatively; the sentence was corrected.

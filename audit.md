@@ -2,6 +2,18 @@
 
 Dated log of editorial passes and verification runs. Newest first.
 
+## 2026-09-23 — structured-evidence migration
+
+Structured-evidence migration (references and claims).
+- references.yaml: 33 CSL entries. 31 resolved through doi.org content negotiation (27 Crossref DOIs, 4 arXiv DOIs through DataCite) and checked for year, title and authors; capitalised or annotated record titles (Hutter, Moor, Piccinini 2008, Moore, Wigner, Sherry and Thompson) restored to published form; Aaronson chapter given its book title and editors. technology2026 (Hugging Face model card) and thatblend2026 (GitHub repository) entered by hand from their URLs. In-text author-year citations converted to Pandoc [@id] syntax; the legacy list replaced by the citeproc-rendered list (Chicago author-date).
+- Correction: "14 percent of the remainder improve transformatively" -> "14 percent of all families"; Sherry and Thompson (2021) report 14% of the families, and the simulation calibrates to that share.
+- Correction: "reproduces the reported file size to within 5 percent" -> "5.1 percent"; results.json /lattice/file_size_relative_error = 0.05058.
+- Correction: "the seven configurations the lattice predicts should fail" -> "fourteen"; 16 subsets less 2 viable (the model evaluates 6 that fit memory but miss the floor and 8 that do not fit).
+- claims.yaml: 106 claims (71 computation, 22 source, 3 definition, 3 assumption, 7 interpretation). Every simulation number in abstract and body is bound to results.json. Source claims checked against the LLMPSP README, Sherry and Thompson's full text, Moor's article, and abstracts from Crossref/DataCite/OpenAlex (Hernandez and Brown, Erdil and Besiroglu, Ho et al., Koch et al., Leiserson et al., Blum, Wolpert and Macready, Piccinini, Guttenbrunner and Rauber).
+- Unverified, not bound: Hutter (2002) "with a constant that makes it unusable" (the abstract states a factor of 5 plus additive terms; the size of the constant is not in the retrievable abstract); Hooker (2021) on hardware shaping which algorithms are refined (abstract too brief); Rothenberg (1995), Rosenthal et al. (2005), Landauer (1961), Halevy et al. (2009), Massalin (1987) statements (no abstract retrieved or interpretive use).
+- Run: extensibility (uv run python run_all.py); results.json reproduced byte for byte.
+- metadata claims_target: claim-ledger.
+
 ## 2026-09-22 — prose revision
 
 Prose revision against the house standards. No computation or conclusion changed.

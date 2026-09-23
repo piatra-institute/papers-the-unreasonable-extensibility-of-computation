@@ -1,0 +1,561 @@
+# CSL references with stable IDs; cite with Pandoc [@id] syntax.
+# Migrated from the legacy inline bibliography. Entries with a DOI were resolved through doi.org
+# content negotiation (CSL-JSON) and checked for year and title; others were matched in Crossref
+# or entered by hand. Provenance per entry is in sources.md.
+references:
+- id: aaronson2013
+  type: chapter
+  title: Why Philosophers Should Care about Computational Complexity
+  author:
+  - given: Scott
+    family: Aaronson
+  container-title: 'Computability: Turing, Gödel, Church, and Beyond'
+  page: 261-328
+  publisher: MIT Press
+  DOI: 10.7551/mitpress/8009.003.0011
+  issued:
+    date-parts:
+    - - 2013
+  editor:
+  - family: Copeland
+    given: B. Jack
+  - family: Posy
+    given: Carl J.
+  - family: Shagrir
+    given: Oron
+  publisher-place: Cambridge, MA
+- id: blum1967
+  type: article-journal
+  title: A Machine-Independent Theory of the Complexity of Recursive Functions
+  author:
+  - given: Manuel
+    family: Blum
+  container-title: Journal of the ACM
+  volume: '14'
+  issue: '2'
+  page: 322-336
+  DOI: 10.1145/321386.321395
+  issued:
+    date-parts:
+    - - 1967
+- id: denning2017
+  type: article-journal
+  title: Exponential laws of computing growth
+  author:
+  - given: Peter J.
+    family: Denning
+  - given: Ted G.
+    family: Lewis
+  container-title: Communications of the ACM
+  volume: '60'
+  issue: '1'
+  page: 54-65
+  DOI: 10.1145/2976758
+  URL: http://dx.doi.org/10.1145/2976758
+  issued:
+    date-parts:
+    - - 2017
+- id: erdil2022
+  type: article
+  title: Algorithmic progress in computer vision
+  author:
+  - family: Erdil
+    given: Ege
+  - family: Besiroglu
+    given: Tamay
+  container-title: arXiv
+  number: arXiv:2212.05153
+  DOI: 10.48550/arXiv.2212.05153
+  URL: https://arxiv.org/abs/2212.05153
+  issued:
+    date-parts:
+    - - 2022
+- id: frantar2022
+  type: paper-conference
+  title: 'Optimal Brain Compression: A Framework for Accurate Post-Training Quantization and Pruning'
+  author:
+  - given: Elias
+    family: Frantar
+  - given: Dan
+    family: Alistarh
+  container-title: Advances in Neural Information Processing Systems 35 (NeurIPS 2022)
+  page: 4475-4488
+  publisher: Curran Associates
+  DOI: 10.52202/068431-0323
+  issued:
+    date-parts:
+    - - 2022
+- id: gu2023
+  type: article
+  title: 'Mamba: Linear-Time Sequence Modeling with Selective State Spaces'
+  author:
+  - family: Gu
+    given: Albert
+  - family: Dao
+    given: Tri
+  container-title: arXiv
+  number: arXiv:2312.00752
+  DOI: 10.48550/arXiv.2312.00752
+  URL: https://arxiv.org/abs/2312.00752
+  issued:
+    date-parts:
+    - - 2023
+- id: guttenbrunner2012
+  type: article-journal
+  title: A Measurement Framework for Evaluating Emulators for Digital Preservation
+  author:
+  - given: Mark
+    family: Guttenbrunner
+  - given: Andreas
+    family: Rauber
+  container-title: ACM Transactions on Information Systems
+  volume: '30'
+  issue: '2'
+  page: 1-28
+  DOI: 10.1145/2180868.2180876
+  issued:
+    date-parts:
+    - - 2012
+- id: halevy2009
+  type: article-journal
+  title: The Unreasonable Effectiveness of Data
+  author:
+  - given: Alon
+    family: Halevy
+  - given: Peter
+    family: Norvig
+  - given: Fernando
+    family: Pereira
+  container-title: IEEE Intelligent Systems
+  volume: '24'
+  issue: '2'
+  page: 8-12
+  DOI: 10.1109/MIS.2009.36
+  issued:
+    date-parts:
+    - - 2009
+- id: hartmanis1965
+  type: article-journal
+  title: On the computational complexity of algorithms
+  author:
+  - given: J.
+    family: Hartmanis
+  - given: R. E.
+    family: Stearns
+  container-title: Transactions of the American Mathematical Society
+  volume: '117'
+  page: 285-306
+  DOI: 10.1090/S0002-9947-1965-0170805-7
+  issued:
+    date-parts:
+    - - 1965
+- id: hennessy2019
+  type: article-journal
+  title: A new golden age for computer architecture
+  author:
+  - given: John L.
+    family: Hennessy
+  - given: David A.
+    family: Patterson
+  container-title: Communications of the ACM
+  volume: '62'
+  issue: '2'
+  page: 48-60
+  DOI: 10.1145/3282307
+  issued:
+    date-parts:
+    - - 2019
+- id: hernandez2020
+  type: article
+  title: Measuring the Algorithmic Efficiency of Neural Networks
+  author:
+  - family: Hernandez
+    given: Danny
+  - family: Brown
+    given: Tom B.
+  container-title: arXiv
+  number: arXiv:2005.04305
+  DOI: 10.48550/arXiv.2005.04305
+  URL: https://arxiv.org/abs/2005.04305
+  issued:
+    date-parts:
+    - - 2020
+- id: ho2024
+  type: article
+  title: Algorithmic progress in language models
+  author:
+  - family: Ho
+    given: Anson
+  - family: Besiroglu
+    given: Tamay
+  - family: Erdil
+    given: Ege
+  - family: Owen
+    given: David
+  - family: Rahman
+    given: Robi
+  - family: Guo
+    given: Zifan Carl
+  - family: Atkinson
+    given: David
+  - family: Thompson
+    given: Neil
+  - family: Sevilla
+    given: Jaime
+  container-title: arXiv
+  number: arXiv:2403.05812
+  DOI: 10.48550/arXiv.2403.05812
+  URL: https://arxiv.org/abs/2403.05812
+  issued:
+    date-parts:
+    - - 2024
+- id: hooker2021
+  type: article-journal
+  title: The hardware lottery
+  author:
+  - given: Sara
+    family: Hooker
+  container-title: Communications of the ACM
+  volume: '64'
+  issue: '12'
+  page: 58-65
+  DOI: 10.1145/3467017
+  issued:
+    date-parts:
+    - - 2021
+- id: hutter2002
+  type: article-journal
+  title: The Fastest and Shortest Algorithm for All Well-Defined Problems
+  author:
+  - given: Marcus
+    family: Hutter
+  container-title: International Journal of Foundations of Computer Science
+  volume: '13'
+  issue: '3'
+  page: 431-443
+  DOI: 10.1142/S0129054102001199
+  issued:
+    date-parts:
+    - - 2002
+- id: jacob2018
+  type: paper-conference
+  title: Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference
+  author:
+  - given: Benoit
+    family: Jacob
+  - given: Skirmantas
+    family: Kligys
+  - given: Bo
+    family: Chen
+  - given: Menglong
+    family: Zhu
+  - given: Matthew
+    family: Tang
+  - given: Andrew
+    family: Howard
+  - given: Hartwig
+    family: Adam
+  - given: Dmitry
+    family: Kalenichenko
+  container-title: 2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition
+  page: 2704-2713
+  publisher: IEEE
+  DOI: 10.1109/CVPR.2018.00286
+  issued:
+    date-parts:
+    - - 2018
+- id: koch2022
+  type: article-journal
+  title: Progress in mathematical programming solvers from 2001 to 2020
+  author:
+  - given: Thorsten
+    family: Koch
+  - given: Timo
+    family: Berthold
+  - given: Jaap
+    family: Pedersen
+  - given: Charlie
+    family: Vanaret
+  container-title: EURO Journal on Computational Optimization
+  volume: '10'
+  page: '100031'
+  DOI: 10.1016/j.ejco.2022.100031
+  issued:
+    date-parts:
+    - - 2022
+- id: landauer1961
+  type: article-journal
+  title: Irreversibility and Heat Generation in the Computing Process
+  author:
+  - given: R.
+    family: Landauer
+  container-title: IBM Journal of Research and Development
+  volume: '5'
+  issue: '3'
+  page: 183-191
+  DOI: 10.1147/rd.53.0183
+  issued:
+    date-parts:
+    - - 1961
+- id: leiserson2020
+  type: article-journal
+  title: 'There''s Plenty of Room at the Top: What Will Drive Computer Performance after Moore''s Law?'
+  author:
+  - given: Charles E.
+    family: Leiserson
+  - given: Neil C.
+    family: Thompson
+  - given: Joel S.
+    family: Emer
+  - given: Bradley C.
+    family: Kuszmaul
+  - given: Butler W.
+    family: Lampson
+  - given: Daniel
+    family: Sanchez
+  - given: Tao B.
+    family: Schardl
+  container-title: Science
+  volume: '368'
+  issue: '6495'
+  DOI: 10.1126/science.aam9744
+  URL: http://dx.doi.org/10.1126/science.aam9744
+  issued:
+    date-parts:
+    - - 2020
+  page: eaam9744
+- id: li2019
+  type: book
+  title: An Introduction to Kolmogorov Complexity and Its Applications
+  author:
+  - given: Ming
+    family: Li
+  - given: Paul
+    family: Vitányi
+  publisher: Springer
+  DOI: 10.1007/978-3-030-11298-1
+  URL: http://dx.doi.org/10.1007/978-3-030-11298-1
+  issued:
+    date-parts:
+    - - 2019
+  collection-title: Texts in Computer Science
+  edition: '4'
+  publisher-place: Cham
+- id: massalin1987
+  type: article-journal
+  title: 'Superoptimizer: a look at the smallest program'
+  author:
+  - given: Henry
+    family: Massalin
+  container-title: ACM SIGARCH Computer Architecture News
+  volume: '15'
+  issue: '5'
+  page: 122-126
+  DOI: 10.1145/36177.36194
+  issued:
+    date-parts:
+    - - 1987
+- id: moor1985
+  type: article-journal
+  title: What Is Computer Ethics?
+  author:
+  - given: James H.
+    family: Moor
+  container-title: Metaphilosophy
+  volume: '16'
+  issue: '4'
+  page: 266-275
+  DOI: 10.1111/j.1467-9973.1985.tb00173.x
+  URL: http://dx.doi.org/10.1111/j.1467-9973.1985.tb00173.x
+  issued:
+    date-parts:
+    - - 1985
+- id: moore2006
+  type: article-journal
+  title: Cramming More Components onto Integrated Circuits
+  author:
+  - given: Gordon E.
+    family: Moore
+  container-title: IEEE Solid-State Circuits Society Newsletter
+  volume: '11'
+  issue: '3'
+  page: 33-35
+  DOI: 10.1109/N-SSC.2006.4785860
+  URL: http://dx.doi.org/10.1109/N-SSC.2006.4785860
+  issued:
+    date-parts:
+    - - 2006
+  note: 'Reprinted from Electronics 38 (8): 114–17, 1965'
+  original-date:
+    date-parts:
+    - - 1965
+- id: piccinini2007
+  type: article-journal
+  title: Computing Mechanisms
+  author:
+  - given: Gualtiero
+    family: Piccinini
+  container-title: Philosophy of Science
+  volume: '74'
+  issue: '4'
+  page: 501-526
+  DOI: 10.1086/522851
+  issued:
+    date-parts:
+    - - 2007
+- id: piccinini2008
+  type: article-journal
+  title: Computers
+  author:
+  - given: Gualtiero
+    family: Piccinini
+  container-title: Pacific Philosophical Quarterly
+  volume: '89'
+  issue: '1'
+  page: 32-73
+  DOI: 10.1111/j.1468-0114.2008.00309.x
+  issued:
+    date-parts:
+    - - 2008
+- id: rice1953
+  type: article-journal
+  title: Classes of recursively enumerable sets and their decision problems
+  author:
+  - given: H. G.
+    family: Rice
+  container-title: Transactions of the American Mathematical Society
+  volume: '74'
+  issue: '2'
+  page: 358-366
+  DOI: 10.1090/S0002-9947-1953-0053041-6
+  issued:
+    date-parts:
+    - - 1953
+- id: rosenthal2005
+  type: article-journal
+  title: 'Requirements for Digital Preservation Systems: A Bottom-Up Approach'
+  author:
+  - given: David S. H.
+    family: Rosenthal
+  - given: Thomas
+    family: Robertson
+  - given: Tom
+    family: Lipkis
+  - given: Vicky
+    family: Reich
+  - given: Seth
+    family: Morabito
+  container-title: D-Lib Magazine
+  volume: '11'
+  issue: '11'
+  DOI: 10.1045/november2005-rosenthal
+  URL: http://dx.doi.org/10.1045/november2005-rosenthal
+  issued:
+    date-parts:
+    - - 2005
+- id: rothenberg1995
+  type: article-journal
+  title: Ensuring the Longevity of Digital Documents
+  author:
+  - given: Jeff
+    family: Rothenberg
+  container-title: Scientific American
+  volume: '272'
+  issue: '1'
+  page: 42-47
+  DOI: 10.1038/scientificamerican0195-42
+  issued:
+    date-parts:
+    - - 1995
+- id: sherry2021
+  type: article-journal
+  title: How Fast Do Algorithms Improve?
+  author:
+  - given: Yash
+    family: Sherry
+  - given: Neil C.
+    family: Thompson
+  container-title: Proceedings of the IEEE
+  volume: '109'
+  issue: '11'
+  page: 1768-1777
+  DOI: 10.1109/jproc.2021.3107219
+  URL: http://dx.doi.org/10.1109/JPROC.2021.3107219
+  issued:
+    date-parts:
+    - - 2021
+- id: technology2026
+  type: webpage
+  title: Falcon-H1-Tiny-90M-Instruct
+  author:
+  - literal: Technology Innovation Institute
+  container-title: Hugging Face model card
+  URL: https://huggingface.co/tiiuae/Falcon-H1-Tiny-90M-Instruct
+  issued:
+    date-parts:
+    - - 2026
+  accessed:
+    date-parts:
+    - - 2026
+      - 9
+      - 23
+- id: thatblend2026
+  type: webpage
+  title: 'LLMPSP: A Custom LLM Runtime for the Sony PSP'
+  author:
+  - literal: Thatblend
+  container-title: GitHub repository
+  URL: https://github.com/thatblend/LLMPSP
+  issued:
+    date-parts:
+    - - 2026
+  accessed:
+    date-parts:
+    - - 2026
+      - 9
+      - 23
+- id: turing1937
+  type: article-journal
+  title: On Computable Numbers, with an Application to the Entscheidungsproblem
+  author:
+  - given: A. M.
+    family: Turing
+  container-title: Proceedings of the London Mathematical Society
+  volume: s2-42
+  issue: '1'
+  page: 230-265
+  DOI: 10.1112/plms/s2-42.1.230
+  issued:
+    date-parts:
+    - - 1937
+- id: wigner1960
+  type: article-journal
+  title: The Unreasonable Effectiveness of Mathematics in the Natural Sciences
+  author:
+  - given: Eugene P.
+    family: Wigner
+  container-title: Communications on Pure and Applied Mathematics
+  volume: '13'
+  issue: '1'
+  page: 1-14
+  DOI: 10.1002/cpa.3160130102
+  URL: http://dx.doi.org/10.1002/cpa.3160130102
+  issued:
+    date-parts:
+    - - 1960
+- id: wolpert1997
+  type: article-journal
+  title: No free lunch theorems for optimization
+  author:
+  - given: David H.
+    family: Wolpert
+  - given: William G.
+    family: Macready
+  container-title: IEEE Transactions on Evolutionary Computation
+  volume: '1'
+  issue: '1'
+  page: 67-82
+  DOI: 10.1109/4235.585893
+  issued:
+    date-parts:
+    - - 1997

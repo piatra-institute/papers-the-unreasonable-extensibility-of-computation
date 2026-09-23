@@ -1,10 +1,10 @@
 {
-  "manuscript_sha256": "5f1f07880d128167c25df87dc7b2c7889d7f5c867a30b003d5d10671c93f044b",
+  "manuscript_sha256": "6da1db54bd86ebe93b8693a2642885c680ba0a0ec111af36f02ad5c9cdbd8b97",
   "full_read": true,
   "argument_review": true,
   "structure_review": true,
   "voice_review": true,
   "source_review": true,
   "final_read": true,
-  "notes": "Prose revision against the house standards for plain, declarative scientific writing. The manuscript was reread in full and rewritten paragraph by paragraph with every number, quotation, citation, equation and figure preserved. The abstract was cut from about 490 words to 257. Aphoristic section titles were replaced ('A console from 2004, generating text' became 'Introduction'; 'What the borrowed title does and does not claim' became 'Scope of the title'; 'The technique lattice' became 'Requirements of the console runtime'; 'The frontier that grows and the frontier you can run' became 'Known and deployable capability'; 'What this is not' became 'Limitations'; 'What would break this' became 'Falsification tests'). Removed: 'rather than' (twenty-five instances to none), meta-commentary ('Take that last sentence seriously', 'The confusion in the vicinity is worth separating carefully', 'The number that states the cost of preventing this is the one to keep'), and epigrams ('Compression is capability-producing up to a point that can be computed, and past it compression is decoration', 'The machine is the easy part to keep', 'three of these techniques produce the capability and the fourth produces the experience of it'). Two values were stated more precisely: the latency floor above which the 8-bit cache becomes necessary is 0.456 tokens per second, the throughput of the three-technique subset, where the text had given 0.46, the next point on a 0.01 grid; and the frozen faster device is overtaken after 25.4 years, where the text said 'in year 25'. This paper predates the bound claim ledger and CSL bibliography; its legacy references and claims status is unchanged by this pass."
+  "notes": "Structured-evidence migration: inline bibliography converted to references.yaml (CSL) with Pandoc [@id] citations; claims.yaml ledger and execution receipt added; three factual corrections (Sherry and Thompson's 14 percent, the file-size error 5 -> 5.1 percent, the failing-configuration count seven -> fourteen); prose otherwise unchanged."
 }

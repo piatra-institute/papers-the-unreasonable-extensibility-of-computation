@@ -1,0 +1,1297 @@
+schema: 1
+coverage: reviewed
+reviewed_manuscript_sha256: 6da1db54bd86ebe93b8693a2642885c680ba0a0ec111af36f02ad5c9cdbd8b97
+claims:
+- id: abs-fp32-over-cache
+  kind: computation
+  passage: First, arithmetic on the runtime's published byte format shows that full-precision weights
+    need 7.24 times the console's weight cache and four-bit quantisation still leaves the model at 1.02
+    times the cache, so 0.87 MB per token must be streamed; of the sixteen combinations of the runtime's
+    four techniques, 2 reach 0.4 tokens per second, three techniques are individually necessary, and on
+    the 32 MB revision of the console none runs.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/fp32_over_cache
+    reported: '7.24'
+    units: multiple of the 48 MB weight cache
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 2
+- id: abs-q4-over-cache
+  kind: computation
+  passage: First, arithmetic on the runtime's published byte format shows that full-precision weights
+    need 7.24 times the console's weight cache and four-bit quantisation still leaves the model at 1.02
+    times the cache, so 0.87 MB per token must be streamed; of the sixteen combinations of the runtime's
+    four techniques, 2 reach 0.4 tokens per second, three techniques are individually necessary, and on
+    the 32 MB revision of the console none runs.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/q4_over_cache
+    reported: '1.02'
+    units: multiple of the 48 MB weight cache
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 2
+- id: abs-streamed
+  kind: computation
+  passage: First, arithmetic on the runtime's published byte format shows that full-precision weights
+    need 7.24 times the console's weight cache and four-bit quantisation still leaves the model at 1.02
+    times the cache, so 0.87 MB per token must be streamed; of the sixteen combinations of the runtime's
+    four techniques, 2 reach 0.4 tokens per second, three techniques are individually necessary, and on
+    the 32 MB revision of the console none runs.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/streamed_mb_per_token
+    reported: '0.87'
+    units: MB per token
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 2
+- id: abs-n-viable
+  kind: computation
+  passage: First, arithmetic on the runtime's published byte format shows that full-precision weights
+    need 7.24 times the console's weight cache and four-bit quantisation still leaves the model at 1.02
+    times the cache, so 0.87 MB per token must be streamed; of the sixteen combinations of the runtime's
+    four techniques, 2 reach 0.4 tokens per second, three techniques are individually necessary, and on
+    the 32 MB revision of the console none runs.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/supported/n_viable
+    reported: '2'
+    units: subsets reaching the 0.4 tokens/s floor
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 0
+- id: abs-invisible-low
+  kind: computation
+  passage: Second, in a model calibrated to a census of 113 algorithm families, between 0.83 and 0.89
+    of improvement events change no capability, and the burstiness of capability crossings relative to
+    efficiency gains rises from 0.84 to 1.67 as the budget becomes more restrictive.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/worlds/0/invisible_share
+    reported: '0.83'
+    units: share of improvement events
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904; tasks start at 2 times budget
+    decimals: 2
+- id: abs-invisible-high
+  kind: computation
+  passage: Second, in a model calibrated to a census of 113 algorithm families, between 0.83 and 0.89
+    of improvement events change no capability, and the burstiness of capability crossings relative to
+    efficiency gains rises from 0.84 to 1.67 as the budget becomes more restrictive.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/worlds/2/invisible_share
+    reported: '0.89'
+    units: share of improvement events
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904; tasks start at 20 times budget
+    decimals: 2
+- id: abs-burst-low
+  kind: computation
+  passage: Second, in a model calibrated to a census of 113 algorithm families, between 0.83 and 0.89
+    of improvement events change no capability, and the burstiness of capability crossings relative to
+    efficiency gains rises from 0.84 to 1.67 as the budget becomes more restrictive.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/worlds/0/burstiness_ratio
+    reported: '0.84'
+    units: ratio of coefficients of variation
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904; 2 times budget
+    decimals: 2
+- id: abs-burst-high
+  kind: computation
+  passage: Second, in a model calibrated to a census of 113 algorithm families, between 0.83 and 0.89
+    of improvement events change no capability, and the burstiness of capability crossings relative to
+    efficiency gains rises from 0.84 to 1.67 as the budget becomes more restrictive.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/worlds/2/burstiness_ratio
+    reported: '1.67'
+    units: ratio of coefficients of variation
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904; 20 times budget
+    decimals: 2
+- id: abs-deployable-5
+  kind: computation
+  passage: Third, deployable capability requires every component of a software stack to remain runnable,
+    so it saturates at 0.43 of known capability for a five-component stack; for such a stack to last as
+    long as the mean interval between improvements in its field, each component would need a mean life
+    of 201 years.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/by_depth/3/ratio_at_40
+    reported: '0.43'
+    units: deployable share of known at 40 years
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904;
+      depth 5
+    decimals: 2
+- id: abs-component-life
+  kind: computation
+  passage: Third, deployable capability requires every component of a software stack to remain runnable,
+    so it saturates at 0.43 of known capability for a five-component stack; for such a stack to last as
+    long as the mean interval between improvements in its field, each component would need a mean life
+    of 201 years.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/critical_interval_years_stack
+    reported: '201'
+    units: years of mean component life
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904;
+      depth 5
+    decimals: 0
+- id: scalar-rate
+  kind: computation
+  passage: The scalar arithmetic rate is solved so that the full four-technique stack reproduces the reported
+    throughput, which fixes it at 33.3 million multiply-accumulate pairs per second; every other value
+    below is a prediction from that calibration.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/scalar_mac_per_s_millions
+    reported: '33.3'
+    units: million multiply-accumulate pairs per second
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 1
+- id: block-gain
+  kind: computation
+  passage: The block format stores 32 weights and one 16-bit scale in 18 bytes, or 0.5625 bytes per weight
+    against 4 for full precision, a factor of 7.11.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/representation_gain
+    reported: '7.11'
+    units: ratio of bytes per weight
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 2
+- id: weights-fp32
+  kind: computation
+  passage: For 91.1 million parameters, the four representations require 347.5 MB at full precision, 173.8
+    MB at half precision, 92.3 MB at 8 bits with the same block scale, and 48.87 MB in the format used.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/ladder/0/weights_mb
+    reported: '347.5'
+    units: MB
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 1
+- id: weights-fp16
+  kind: computation
+  passage: For 91.1 million parameters, the four representations require 347.5 MB at full precision, 173.8
+    MB at half precision, 92.3 MB at 8 bits with the same block scale, and 48.87 MB in the format used.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/ladder/1/weights_mb
+    reported: '173.8'
+    units: MB
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 1
+- id: weights-int8
+  kind: computation
+  passage: For 91.1 million parameters, the four representations require 347.5 MB at full precision, 173.8
+    MB at half precision, 92.3 MB at 8 bits with the same block scale, and 48.87 MB in the format used.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/ladder/2/weights_mb
+    reported: '92.3'
+    units: MB
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 1
+- id: weights-q4
+  kind: computation
+  passage: For 91.1 million parameters, the four representations require 347.5 MB at full precision, 173.8
+    MB at half precision, 92.3 MB at 8 bits with the same block scale, and 48.87 MB in the format used.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/ladder/3/weights_mb
+    reported: '48.87'
+    units: MB
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 2
+- id: over-cache-fp32
+  kind: computation
+  passage: Against the 48 MB the runtime can cache, these are 7.24, 3.62, 1.92 and 1.02 times the budget,
+    so none fits.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/ladder/0/over_cache_budget
+    reported: '7.24'
+    units: multiple of the weight cache
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 2
+- id: over-cache-fp16
+  kind: computation
+  passage: Against the 48 MB the runtime can cache, these are 7.24, 3.62, 1.92 and 1.02 times the budget,
+    so none fits.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/ladder/1/over_cache_budget
+    reported: '3.62'
+    units: multiple of the weight cache
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 2
+- id: over-cache-int8
+  kind: computation
+  passage: Against the 48 MB the runtime can cache, these are 7.24, 3.62, 1.92 and 1.02 times the budget,
+    so none fits.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/ladder/2/over_cache_budget
+    reported: '1.92'
+    units: multiple of the weight cache
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 2
+- id: over-cache-q4
+  kind: computation
+  passage: Against the 48 MB the runtime can cache, these are 7.24, 3.62, 1.92 and 1.02 times the budget,
+    so none fits.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/ladder/3/over_cache_budget
+    reported: '1.02'
+    units: multiple of the weight cache
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 2
+- id: computed-file
+  kind: computation
+  passage: Adding the full-precision tensors gives a computed file of 49.37 MB against the reported 52
+    MB, a residual of 2.63 MB consistent with the embedded tokenizer, whose size the documentation does
+    not state.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/computed_file_mb
+    reported: '49.37'
+    units: MB
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 2
+- id: tokenizer-residual
+  kind: computation
+  passage: Adding the full-precision tensors gives a computed file of 49.37 MB against the reported 52
+    MB, a residual of 2.63 MB consistent with the embedded tokenizer, whose size the documentation does
+    not state.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/implied_tokenizer_mb
+    reported: '2.63'
+    units: MB
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 2
+- id: file-size-error
+  kind: computation
+  passage: The model of the artifact reproduces the reported file size to within 5.1 percent without using
+    it as an input.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/file_size_relative_error
+    reported: '5.1'
+    units: percent of the reported 52 MB
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 1
+    scale: 100
+- id: streamed
+  kind: computation
+  passage: With 48 MB resident and 48.87 MB of weights, the runtime must read 0.87 MB from the card per
+    token.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/streamed_mb_per_token
+    reported: '0.87'
+    units: MB per token
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 2
+- id: kv-floor
+  kind: computation
+  passage: 'The 8-bit cache is not necessary at this floor: it returns 3 MB to the weight cache and shortens
+    the stream, and it becomes necessary only for floors above 0.456 tokens per second, the throughput
+    of the three-technique subset.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/int8_kv_necessary_above_floor_exact
+    reported: '0.456'
+    units: tokens per second
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 3
+- id: legacy-best
+  kind: computation
+  passage: On the 32 MB revision of the console, with the same 8 MB of runtime state, none of the 16 subsets
+    reaches the floor, and the best configuration runs at 0.17 tokens per second.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/legacy/best_tokens_per_second
+    reported: '0.17'
+    units: tokens per second
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack; 32 MB revision
+    decimals: 2
+- id: io-bound-bits
+  kind: computation
+  passage: At or above 6 bits per weight the system is limited by storage bandwidth, and at or below 5
+    bits by arithmetic.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/io_bound_at_or_above_bits
+    reported: '6'
+    units: bits per weight
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 0
+- id: compute-bound-bits
+  kind: computation
+  passage: At or above 6 bits per weight the system is limited by storage bandwidth, and at or below 5
+    bits by arithmetic.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/compute_bound_at_or_below_bits
+    reported: '5'
+    units: bits per weight
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 0
+- id: full-stack-throughput
+  kind: computation
+  passage: 'The format in use has 4 bits, past this transition, so further compression gives almost nothing:
+    a representation occupying no space at all would raise throughput from 0.55 to 0.585 tokens per second,
+    a factor of 1.06.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/full_stack/tokens_per_second
+    reported: '0.55'
+    units: tokens per second
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 2
+- id: compute-floor
+  kind: computation
+  passage: 'The format in use has 4 bits, past this transition, so further compression gives almost nothing:
+    a representation occupying no space at all would raise throughput from 0.55 to 0.585 tokens per second,
+    a factor of 1.06.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/compute_floor_tok_s
+    reported: '0.585'
+    units: tokens per second
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 3
+- id: headroom
+  kind: computation
+  passage: 'The format in use has 4 bits, past this transition, so further compression gives almost nothing:
+    a representation occupying no space at all would raise throughput from 0.55 to 0.585 tokens per second,
+    a factor of 1.06.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/headroom_from_perfect_representation
+    reported: '1.06'
+    units: throughput ratio
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 2
+- id: mix-median
+  kind: computation
+  passage: We model it by drawing 113 families from a three-component mixture whose parameters reproduce
+    four figures from the census, giving a median rate of 0.145, a transformative share of 0.124 against
+    a target of 0.14, and a share faster than hardware of 0.301.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/calibration/median_rate
+    reported: '0.145'
+    units: annual improvement rate
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904
+    decimals: 3
+- id: mix-transformative
+  kind: computation
+  passage: We model it by drawing 113 families from a three-component mixture whose parameters reproduce
+    four figures from the census, giving a median rate of 0.145, a transformative share of 0.124 against
+    a target of 0.14, and a share faster than hardware of 0.301.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/calibration/share_transformative
+    reported: '0.124'
+    units: share of families
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904
+    decimals: 3
+- id: mix-above-hw
+  kind: computation
+  passage: We model it by drawing 113 families from a three-component mixture whose parameters reproduce
+    four figures from the census, giving a median rate of 0.145, a transformative share of 0.124 against
+    a target of 0.14, and a share faster than hardware of 0.301.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/calibration/share_above_hardware
+    reported: '0.301'
+    units: share of families
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904
+    decimals: 3
+- id: hw-rate
+  kind: computation
+  passage: 'The hardware rate is not stipulated: taking it as the seventieth percentile of the mixture
+    gives 0.446 a year, within the range of benchmark series [@moore2006; @hennessy2019; @denning2017].'
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/calibration/implied_hardware_rate
+    reported: '0.446'
+    units: annual rate
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904
+    decimals: 3
+- id: invisible-2x
+  kind: computation
+  passage: Across the three regimes examined, between 0.828 and 0.893 of improvement events change no
+    capability predicate, either because they improve a dimension that was not binding or because the
+    gain falls short of the budget.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/worlds/0/invisible_share
+    reported: '0.828'
+    units: share of improvement events
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904; 2 times budget
+    decimals: 3
+- id: invisible-20x
+  kind: computation
+  passage: Across the three regimes examined, between 0.828 and 0.893 of improvement events change no
+    capability predicate, either because they improve a dimension that was not binding or because the
+    gain falls short of the budget.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/worlds/2/invisible_share
+    reported: '0.893'
+    units: share of improvement events
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904; 20 times budget
+    decimals: 3
+- id: burst-2x
+  kind: computation
+  passage: The coefficient of variation of annual capability crossings, divided by the same statistic
+    for the annual efficiency gains that produce them, is 0.84 when tasks start at 2 times their budget,
+    1.39 at 5 times and 1.67 at 20 times.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/worlds/0/burstiness_ratio
+    reported: '0.84'
+    units: ratio of coefficients of variation
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904; 2 times budget
+    decimals: 2
+- id: burst-5x
+  kind: computation
+  passage: The coefficient of variation of annual capability crossings, divided by the same statistic
+    for the annual efficiency gains that produce them, is 0.84 when tasks start at 2 times their budget,
+    1.39 at 5 times and 1.67 at 20 times.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/worlds/1/burstiness_ratio
+    reported: '1.39'
+    units: ratio of coefficients of variation
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904; 5 times budget
+    decimals: 2
+- id: burst-20x
+  kind: computation
+  passage: The coefficient of variation of annual capability crossings, divided by the same statistic
+    for the annual efficiency gains that produce them, is 0.84 when tasks start at 2 times their budget,
+    1.39 at 5 times and 1.67 at 20 times.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/worlds/2/burstiness_ratio
+    reported: '1.67'
+    units: ratio of coefficients of variation
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904; 20 times budget
+    decimals: 2
+- id: topdecile-2x
+  kind: computation
+  passage: The share of crossings contributed by the top decile of families is 0.24, 0.31 and 0.41 across
+    the three regimes, and the share of families that never cross in forty years rises from 0.51 to 0.69
+    to 0.76.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/worlds/0/top_decile_crossing_share
+    reported: '0.24'
+    units: share of crossings
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904; 2 times budget
+    decimals: 2
+- id: topdecile-5x
+  kind: computation
+  passage: The share of crossings contributed by the top decile of families is 0.24, 0.31 and 0.41 across
+    the three regimes, and the share of families that never cross in forty years rises from 0.51 to 0.69
+    to 0.76.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/worlds/1/top_decile_crossing_share
+    reported: '0.31'
+    units: share of crossings
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904; 5 times budget
+    decimals: 2
+- id: topdecile-20x
+  kind: computation
+  passage: The share of crossings contributed by the top decile of families is 0.24, 0.31 and 0.41 across
+    the three regimes, and the share of families that never cross in forty years rises from 0.51 to 0.69
+    to 0.76.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/worlds/2/top_decile_crossing_share
+    reported: '0.41'
+    units: share of crossings
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904; 20 times budget
+    decimals: 2
+- id: never-2x
+  kind: computation
+  passage: The share of crossings contributed by the top decile of families is 0.24, 0.31 and 0.41 across
+    the three regimes, and the share of families that never cross in forty years rises from 0.51 to 0.69
+    to 0.76.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/worlds/0/never_crossed_share
+    reported: '0.51'
+    units: share of families
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904; 2 times budget
+    decimals: 2
+- id: never-5x
+  kind: computation
+  passage: The share of crossings contributed by the top decile of families is 0.24, 0.31 and 0.41 across
+    the three regimes, and the share of families that never cross in forty years rises from 0.51 to 0.69
+    to 0.76.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/worlds/1/never_crossed_share
+    reported: '0.69'
+    units: share of families
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904; 5 times budget
+    decimals: 2
+- id: never-20x
+  kind: computation
+  passage: The share of crossings contributed by the top decile of families is 0.24, 0.31 and 0.41 across
+    the three regimes, and the share of families that never cross in forty years rises from 0.51 to 0.69
+    to 0.76.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/worlds/2/never_crossed_share
+    reported: '0.76'
+    units: share of families
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904; 20 times budget
+    decimals: 2
+- id: overtake
+  kind: computation
+  passage: In the most demanding regime it is overtaken after 25.4 years.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/worlds/2/overtake_year
+    reported: '25.4'
+    units: years
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904; 20 times budget; device with 10 times the budget and frozen software
+    decimals: 1
+- id: alive-component
+  kind: computation
+  passage: With a hazard of 0.03 a year and a revival rate of 0.12, a single component is available 0.80
+    of the time, and the stationary deployable fraction is 0.64, 0.512, 0.328, 0.168 and 0.069 at depths
+    of 2, 3, 5, 8 and 12; by depth 4 less than half of known capability can be run.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/stationary_alive_component
+    reported: '0.80'
+    units: stationary availability
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904
+    decimals: 2
+- id: stationary-d2
+  kind: computation
+  passage: With a hazard of 0.03 a year and a revival rate of 0.12, a single component is available 0.80
+    of the time, and the stationary deployable fraction is 0.64, 0.512, 0.328, 0.168 and 0.069 at depths
+    of 2, 3, 5, 8 and 12; by depth 4 less than half of known capability can be run.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/analytic/1/stationary_fraction
+    reported: '0.64'
+    units: stationary deployable fraction
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904;
+      depth 2
+    decimals: 2
+- id: stationary-d3
+  kind: computation
+  passage: With a hazard of 0.03 a year and a revival rate of 0.12, a single component is available 0.80
+    of the time, and the stationary deployable fraction is 0.64, 0.512, 0.328, 0.168 and 0.069 at depths
+    of 2, 3, 5, 8 and 12; by depth 4 less than half of known capability can be run.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/analytic/2/stationary_fraction
+    reported: '0.512'
+    units: stationary deployable fraction
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904;
+      depth 3
+    decimals: 3
+- id: stationary-d5
+  kind: computation
+  passage: With a hazard of 0.03 a year and a revival rate of 0.12, a single component is available 0.80
+    of the time, and the stationary deployable fraction is 0.64, 0.512, 0.328, 0.168 and 0.069 at depths
+    of 2, 3, 5, 8 and 12; by depth 4 less than half of known capability can be run.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/analytic/3/stationary_fraction
+    reported: '0.328'
+    units: stationary deployable fraction
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904;
+      depth 5
+    decimals: 3
+- id: stationary-d8
+  kind: computation
+  passage: With a hazard of 0.03 a year and a revival rate of 0.12, a single component is available 0.80
+    of the time, and the stationary deployable fraction is 0.64, 0.512, 0.328, 0.168 and 0.069 at depths
+    of 2, 3, 5, 8 and 12; by depth 4 less than half of known capability can be run.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/analytic/4/stationary_fraction
+    reported: '0.168'
+    units: stationary deployable fraction
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904;
+      depth 8
+    decimals: 3
+- id: stationary-d12
+  kind: computation
+  passage: With a hazard of 0.03 a year and a revival rate of 0.12, a single component is available 0.80
+    of the time, and the stationary deployable fraction is 0.64, 0.512, 0.328, 0.168 and 0.069 at depths
+    of 2, 3, 5, 8 and 12; by depth 4 less than half of known capability can be run.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/analytic/5/stationary_fraction
+    reported: '0.069'
+    units: stationary deployable fraction
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904;
+      depth 12
+    decimals: 3
+- id: below-half-depth
+  kind: computation
+  passage: With a hazard of 0.03 a year and a revival rate of 0.12, a single component is available 0.80
+    of the time, and the stationary deployable fraction is 0.64, 0.512, 0.328, 0.168 and 0.069 at depths
+    of 2, 3, 5, 8 and 12; by depth 4 less than half of known capability can be run.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/depth_below_half
+    reported: '4'
+    units: stack depth
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904
+    decimals: 0
+- id: sim-d1
+  kind: computation
+  passage: Simulating arrivals and failures gives deployable shares at forty years of 0.83, 0.70, 0.58,
+    0.43, 0.25 and 0.16 across depths 1, 2, 3, 5, 8 and 12.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/by_depth/0/ratio_at_40
+    reported: '0.83'
+    units: deployable share of known at 40 years
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904;
+      depth 1
+    decimals: 2
+- id: sim-d2
+  kind: computation
+  passage: Simulating arrivals and failures gives deployable shares at forty years of 0.83, 0.70, 0.58,
+    0.43, 0.25 and 0.16 across depths 1, 2, 3, 5, 8 and 12.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/by_depth/1/ratio_at_40
+    reported: '0.70'
+    units: deployable share of known at 40 years
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904;
+      depth 2
+    decimals: 2
+- id: sim-d3
+  kind: computation
+  passage: Simulating arrivals and failures gives deployable shares at forty years of 0.83, 0.70, 0.58,
+    0.43, 0.25 and 0.16 across depths 1, 2, 3, 5, 8 and 12.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/by_depth/2/ratio_at_40
+    reported: '0.58'
+    units: deployable share of known at 40 years
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904;
+      depth 3
+    decimals: 2
+- id: sim-d5
+  kind: computation
+  passage: Simulating arrivals and failures gives deployable shares at forty years of 0.83, 0.70, 0.58,
+    0.43, 0.25 and 0.16 across depths 1, 2, 3, 5, 8 and 12.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/by_depth/3/ratio_at_40
+    reported: '0.43'
+    units: deployable share of known at 40 years
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904;
+      depth 5
+    decimals: 2
+- id: sim-d8
+  kind: computation
+  passage: Simulating arrivals and failures gives deployable shares at forty years of 0.83, 0.70, 0.58,
+    0.43, 0.25 and 0.16 across depths 1, 2, 3, 5, 8 and 12.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/by_depth/4/ratio_at_40
+    reported: '0.25'
+    units: deployable share of known at 40 years
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904;
+      depth 8
+    decimals: 2
+- id: sim-d12
+  kind: computation
+  passage: Simulating arrivals and failures gives deployable shares at forty years of 0.83, 0.70, 0.58,
+    0.43, 0.25 and 0.16 across depths 1, 2, 3, 5, 8 and 12.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/by_depth/5/ratio_at_40
+    reported: '0.16'
+    units: deployable share of known at 40 years
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904;
+      depth 12
+    decimals: 2
+- id: psp-depth
+  kind: computation
+  passage: A five-component stack, the depth of the console demonstration, is at 0.43.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/psp_sustained/ratio_at_40
+    reported: '0.43'
+    units: deployable share of known at 40 years
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904;
+      depth 5
+    decimals: 2
+- id: waning-peak-5
+  kind: computation
+  passage: With interest decaying on a twelve-year scale, a five-component stack peaks in year 18, and
+    a twelve-component stack peaks in year 6 and falls to 0.39 of its peak by year 60, although no knowledge
+    is lost in the model.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/waning/1/peak_year
+    reported: '18'
+    units: year
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904;
+      waning arrivals, depth 5
+    decimals: 0
+- id: waning-peak-12
+  kind: computation
+  passage: With interest decaying on a twelve-year scale, a five-component stack peaks in year 18, and
+    a twelve-component stack peaks in year 6 and falls to 0.39 of its peak by year 60, although no knowledge
+    is lost in the model.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/waning/2/peak_year
+    reported: '6'
+    units: year
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904;
+      waning arrivals, depth 12
+    decimals: 0
+- id: waning-end-12
+  kind: computation
+  passage: With interest decaying on a twelve-year scale, a five-component stack peaks in year 18, and
+    a twelve-component stack peaks in year 6 and falls to 0.39 of its peak by year 60, although no knowledge
+    is lost in the model.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/waning/2/end_over_peak
+    reported: '0.39'
+    units: fraction of peak at year 60
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904;
+      waning arrivals, depth 12
+    decimals: 2
+- id: improvement-interval
+  kind: computation
+  passage: Setting a stack's half-life equal to the mean interval between improvements in its field, 27.8
+    years given 1.44 improvements per family over four decades, requires a single component to survive
+    a mean of 41 years and each component of a five-component stack to survive 201 years.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/mean_improvement_interval_years
+    reported: '27.8'
+    units: years
+    conditions: 1.44 improvements per family over 40 years
+    decimals: 1
+- id: life-depth1
+  kind: computation
+  passage: Setting a stack's half-life equal to the mean interval between improvements in its field, 27.8
+    years given 1.44 improvements per family over four decades, requires a single component to survive
+    a mean of 41 years and each component of a five-component stack to survive 201 years.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/critical_interval_years_depth1
+    reported: '41'
+    units: years of mean component life
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904;
+      depth 1
+    decimals: 0
+- id: life-depth5
+  kind: computation
+  passage: Setting a stack's half-life equal to the mean interval between improvements in its field, 27.8
+    years given 1.44 improvements per family over four decades, requires a single component to survive
+    a mean of 41 years and each component of a five-component stack to survive 201 years.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/critical_interval_years_stack
+    reported: '201'
+    units: years of mean component life
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904;
+      depth 5
+    decimals: 0
+- id: limit-never-low
+  kind: computation
+  passage: The census shows that half of algorithm families barely improve, the model reproduces this,
+    and between 0.51 and 0.76 of families never cross a budget in forty years, depending on how far the
+    budget lies.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/worlds/0/never_crossed_share
+    reported: '0.51'
+    units: share of families
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904; 2 times budget
+    decimals: 2
+- id: limit-never-high
+  kind: computation
+  passage: The census shows that half of algorithm families barely improve, the model reproduces this,
+    and between 0.51 and 0.76 of families never cross a budget in forty years, depending on how far the
+    budget lies.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /thresholds/worlds/2/never_crossed_share
+    reported: '0.76'
+    units: share of families
+    conditions: 113 families drawn from the census-calibrated mixture, 40 years, two resource dimensions,
+      seed 20260904; 20 times budget
+    decimals: 2
+- id: falsify-streamed
+  kind: computation
+  passage: If measurement on the hardware shows the runtime streaming much more or much less than 0.87
+    MB per token, or shows the system limited by storage bandwidth at four-bit weights, the model of the
+    artifact is wrong.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /lattice/streamed_mb_per_token
+    reported: '0.87'
+    units: MB per token
+    conditions: published byte format of the runtime, 91.1 million parameters, 48 MB weight cache, 8 MB/s
+      storage bandwidth, scalar rate calibrated to the full stack
+    decimals: 2
+- id: critical-hazard
+  kind: computation
+  passage: If the hazard for well-maintained ecosystems is well below the 0.0246 a year that a single
+    component would require, the decay result applies to neglected platforms and not to software in general.
+  evidence:
+    file: simulation/output/results.json
+    run_id: extensibility
+    pointer: /decay/critical_hazard_depth1
+    reported: '0.0246'
+    units: annual hazard
+    conditions: hazard 0.03 a year, revival 0.12 a year, six arrivals a year, 60-year horizon, seed 20260904;
+      depth 1
+    decimals: 4
+- id: psp-runtime
+  kind: source
+  passage: A custom runtime executes Falcon-H1-Tiny-90M-Instruct, a 90-million-parameter instruction-tuned
+    model whose 24 layers each run grouped-query attention and a Mamba2 recurrent branch in parallel,
+    on the PSP's 333 MHz MIPS processor, generating about 0.5 to 0.6 tokens per second on a PSP-3000 [@thatblend2026;
+    @technology2026; @gu2023].
+  evidence:
+    citation_id: thatblend2026
+    locator: README, introduction and How it works
+    verified: true
+    verification_note: README of github.com/thatblend/LLMPSP retrieved 2026-09-23 and read in full; states
+      the 24-layer hybrid of grouped-query attention and a Mamba2 branch in parallel, the 333 MHz MIPS
+      CPU and about 0.5-0.6 tokens per second on a PSP-3000. The Hugging Face model card (tiiuae/Falcon-H1-Tiny-90M-Instruct)
+      gives 90M parameters and a hybrid Transformers + Mamba architecture; the Mamba abstract (arXiv:2312.00752)
+      describes selective state-space models.
+- id: psp-1000
+  kind: source
+  passage: Supported hardware is the PSP-2000, PSP-3000, Street or Go with custom firmware; "a PSP-1000
+    only has 32 MB of RAM and it won't work".
+  evidence:
+    citation_id: thatblend2026
+    locator: README, Install
+    verified: true
+    verification_note: README of github.com/thatblend/LLMPSP retrieved 2026-09-23 and read in full; the
+      quoted sentence about the PSP-1000 and the supported models are verbatim.
+- id: psp-format
+  kind: source
+  passage: Dense weights are stored in a block format of 32 weights and one 16-bit scale per 18 bytes,
+    with rows independently addressable so that a single embedding row can be read without parsing the
+    file.
+  evidence:
+    citation_id: thatblend2026
+    locator: README, How it works
+    verified: true
+    verification_note: README of github.com/thatblend/LLMPSP retrieved 2026-09-23 and read in full; 32
+      weights, one fp16 scale, 18 bytes per block and independently addressable rows are stated.
+- id: psp-52mb
+  kind: source
+  passage: The file is 52 MB, which "doesn't fit in a 64 MB console alongside ~8 MB of runtime state",
+    so the runtime allocates correctness-critical state first, caches 44 MB of heap plus a 4 MB volatile
+    partition the firmware does not use, and "streams the last few MB from the memory stick per token".
+  evidence:
+    citation_id: thatblend2026
+    locator: README, How it works
+    verified: true
+    verification_note: README of github.com/thatblend/LLMPSP retrieved 2026-09-23 and read in full; 52
+      MB file, ~8 MB runtime state, 44 MB heap plus 4 MB volatile partition and streaming the last few
+      MB per token are verbatim.
+- id: psp-kv
+  kind: source
+  passage: The key-value cache is 8-bit with a scale per head, and the matrix-vector kernels run on the
+    vector unit instead of the scalar floating-point unit.
+  evidence:
+    citation_id: thatblend2026
+    locator: README, How it works
+    verified: true
+    verification_note: README of github.com/thatblend/LLMPSP retrieved 2026-09-23 and read in full; int8
+      KV cache with a float scale per head and kernels on the VFPU rather than the scalar FPU are stated.
+- id: psp-output
+  kind: source
+  passage: 'The author describes the output plainly: the model "can answer basic questions", writes poems
+    and short stories, produces code that does not work, and is "not really useful for anything".'
+  evidence:
+    citation_id: thatblend2026
+    locator: README, introduction
+    verified: true
+    verification_note: README of github.com/thatblend/LLMPSP retrieved 2026-09-23 and read in full; the
+      quoted phrases are verbatim.
+- id: psp-cache-speed
+  kind: source
+  passage: 'The console runtime illustrates why the two must be tracked separately: its documentation
+    notes that cache size "only affects speed, greedy output is identical at any setting", so the artifact
+    moves along the resource axis without moving along the quality axis.'
+  evidence:
+    citation_id: thatblend2026
+    locator: README, How it works
+    verified: true
+    verification_note: README of github.com/thatblend/LLMPSP retrieved 2026-09-23 and read in full; 'Cache
+      size only affects speed, greedy output is identical at any setting' is verbatim.
+- id: moor-malleable
+  kind: source
+  passage: The closest precursor is @moor1985, who described computers as logically malleable, able to
+    be shaped to any activity characterisable through inputs, outputs and connecting logical operations.
+  evidence:
+    citation_id: moor1985
+    locator: Section on logical malleability
+    verified: true
+    verification_note: 'Full text read at the author-hosted copy (web.cs.ucdavis.edu/~rogaway/.../moor.html):
+      computers are logically malleable in that they can be shaped and molded to do any activity characterised
+      in terms of inputs, outputs and connecting logical operations.'
+- id: blum-speedup
+  kind: source
+  passage: The shortest program for a task is not computable [@li2019], nontrivial semantic properties
+    of programs are undecidable [@rice1953], and Blum's speed-up theorem gives computable functions for
+    which every algorithm has an asymptotically faster one, so that no best program exists [@blum1967].
+  evidence:
+    citation_id: blum1967
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1145/321386.321395; the Crossref abstract exhibits a function such that
+      however fast a program for it is, another program computes it very much faster.
+- id: sherry-census
+  kind: source
+  passage: The best available census of algorithmic progress is that of @sherry2021, who examined 57 textbooks
+    and more than 1137 papers and identified 113 algorithm families with an average of eight algorithms
+    each, 276 algorithms in total, an average of 1.44 improvements after the initial one per family.
+  evidence:
+    citation_id: sherry2021
+    locator: Sections I-II
+    verified: true
+    verification_note: 'Full text read (author copy at ide.mit.edu): 57 textbooks, more than 1137 research
+      papers, 113 algorithm families, eight algorithms per family on average, 276 initial algorithms and
+      improvements, 1.44 improvements after the initial algorithm.'
+- id: sherry-shares
+  kind: source
+  passage: About half of the families improve little or not at all, and 14 percent of all families improve
+    transformatively.
+  evidence:
+    citation_id: sherry2021
+    locator: Abstract and Section III
+    verified: true
+    verification_note: 'Full text: around half of all families experience little or no improvement; 14%
+      of the families experience transformative improvement (the manuscript previously said ''of the remainder''
+      and was corrected).'
+- id: sherry-sizes
+  kind: source
+  passage: At a problem size of one thousand, 18 percent of families improved faster than hardware; at
+    one million, 30 percent; and at one billion, 43 percent.
+  evidence:
+    citation_id: sherry2021
+    locator: Section III
+    verified: true
+    verification_note: 'Full text: 18% at n = 1 thousand; 30% and 43% at 1 million and 1 billion improved
+      faster than hardware.'
+- id: sherry-median
+  kind: source
+  passage: The median family improved by 6, 15 and 28 percent a year at those three sizes, and beat hardware
+    only at problem sizes around a trillion.
+  evidence:
+    citation_id: sherry2021
+    locator: Section III
+    verified: true
+    verification_note: 'Full text: the median family improved 6%, 15% and 28% per year at n = 1 thousand,
+      1 million and 1 billion, and beat hardware at n = 1.06 trillion.'
+- id: leiserson
+  kind: source
+  passage: '@leiserson2020 argue that performance must increasingly come from software, algorithms and
+    architecture as transistor scaling slows.'
+  evidence:
+    citation_id: leiserson2020
+    locator: Abstract (editor's summary)
+    verified: true
+    verification_note: DOI 10.1126/science.aam9744; the summary states that transistor scaling is ending
+      and improvements must come from software, algorithms and hardware architecture at the top of the
+      stack.
+- id: hernandez
+  kind: source
+  passage: Training a classifier to AlexNet-level ImageNet performance required 44 times fewer operations
+    in 2019 than in 2012, an efficiency doubling every 16 months, against the 11-fold improvement Moore's
+    law would have given [@hernandez2020].
+  evidence:
+    citation_id: hernandez2020
+    locator: Abstract
+    verified: true
+    verification_note: 'arXiv:2005.04305 abstract (via DataCite): 44x fewer FLOPs 2012-2019, doubling
+      every 16 months, Moore''s law 11x.'
+- id: erdil
+  kind: source
+  passage: Compute-saving innovations in computer vision halve requirements about every nine months, with
+    an interval from 4 to 25 [@erdil2022].
+  evidence:
+    citation_id: erdil2022
+    locator: Abstract
+    verified: true
+    verification_note: 'arXiv:2212.05153 abstract (via DataCite): compute-augmenting innovations halve
+      compute requirements every nine months, 95% CI 4 to 25 months.'
+- id: ho
+  kind: source
+  passage: For language models, the compute needed to reach a fixed performance level halved about every
+    8 months, with an interval from 5 to 14 [@ho2024].
+  evidence:
+    citation_id: ho2024
+    locator: Abstract
+    verified: true
+    verification_note: 'arXiv:2403.05812 abstract (via DataCite): compute to reach a set threshold halved
+      about every 8 months, 95% CI about 5 to 14 months.'
+- id: koch-factors
+  kind: source
+  passage: In mathematical programming between 2001 and 2020, hardware improved about 20-fold while algorithms
+    improved about 9-fold for linear programming and 50-fold for mixed-integer programming [@koch2022].
+  evidence:
+    citation_id: koch2022
+    locator: Abstract
+    verified: true
+    verification_note: 'DOI 10.1016/j.ejco.2022.100031; OpenAlex abstract: hardware about 20 times faster,
+      algorithms improved about nine-fold for LP and around 50 for MILP.'
+- id: koch-quote
+  kind: source
+  passage: 'Koch et al. note that their factors "considerably underestimate the progress made on the algorithmic
+    side: many problem instances can nowadays be solved within seconds, which the old codes are not able
+    to solve within any reasonable time."'
+  evidence:
+    citation_id: koch2022
+    locator: Abstract
+    verified: true
+    verification_note: The quoted clause is verbatim in the OpenAlex abstract.
+- id: wolpert
+  kind: source
+  passage: No algorithm outperforms another averaged over all problems [@wolpert1997], so every claim
+    here is specific to a task family and a distribution.
+  evidence:
+    citation_id: wolpert1997
+    locator: Abstract
+    verified: true
+    verification_note: 'DOI 10.1109/4235.585893; OpenAlex abstract: for any algorithm, elevated performance
+      over one class of problems is offset by performance over another.'
+- id: piccinini
+  kind: source
+  passage: The objection that any physical process can be interpreted as computing anything is answered
+    by the mechanistic account, in which a system computes in virtue of its causal organisation [@piccinini2007]
+    and what makes something a computer depends on how its states are manipulated [@piccinini2008].
+  evidence:
+    citation_id: piccinini2007
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1086/522851 and 10.1111/j.1468-0114.2008.00309.x; the abstracts assimilate
+      computational explanation to mechanistic explanation and state that which functions a system computes
+      depends on its mechanistic properties.
+- id: guttenbrunner
+  kind: source
+  passage: Emulation can substitute partly for a surviving toolchain, with a fidelity that can be measured
+    [@guttenbrunner2012].
+  evidence:
+    citation_id: guttenbrunner2012
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1145/2180868.2180876; the abstract presents a framework and tests assessing
+      how far emulation preserves the original characteristics of digital objects.
+- id: fixed-hardware
+  kind: definition
+  passage: Here *fixed hardware* means that the architecture, clock ceiling, memory and storage capacities,
+    bandwidths, peripherals and power envelope are held constant while the loaded information varies.
+  rationale: Stipulates what is held constant so that software-driven change in capability is well defined;
+    loaded state is explicitly allowed to vary.
+- id: capability-set
+  kind: definition
+  passage: Let $H$ be the fixed hardware, $p$ an executable artifact including code, trained parameters,
+    tables, indexes and the runtime, $Q(p,H,\tau)$ the task quality, $R(p,H,\tau)$ the vector of resources
+    used, and $B$ a budget vector.
+  rationale: Introduces the variables of the feasible capability set; capability is a relation among machine,
+    artifact, task, budget and quality threshold, indexed by the date through K_t.
+- id: frontiers
+  kind: definition
+  passage: A capability is known when an implementation has been described, accessible when the code,
+    toolchain, parameters and expertise to run it can be obtained, and deployed when it runs on the device.
+  rationale: Stipulative definitions of the three nested frontiers used in the third result.
+- id: calibration
+  kind: assumption
+  passage: The scalar arithmetic rate is solved so that the full four-technique stack reproduces the reported
+    throughput, which fixes it at 33.3 million multiply-accumulate pairs per second; every other value
+    below is a prediction from that calibration.
+  rationale: The one free parameter of the lattice arithmetic is fitted to the reported throughput; every
+    other lattice value is a prediction conditional on this fit.
+- id: bandwidth
+  kind: assumption
+  passage: The storage bandwidth is stipulated at 8 MB per second and varied in a sensitivity analysis.
+  rationale: Memory-stick bandwidth is not documented by the runtime; the necessity verdict is reported
+    under a sweep of 4-20 MB/s.
+- id: hazard-model
+  kind: assumption
+  passage: Give each component an annual hazard of becoming unrunnable and an annual rate of being restored.
+  rationale: Independent per-component hazard and revival rates are modelling assumptions; the stated
+    values are not measured, as the falsification section says.
+- id: uncomputable-gap
+  kind: interpretation
+  passage: The difference between the two sets is uncomputable.
+  rationale: Follows from the cited results on Kolmogorov complexity, Rice's theorem and Blum's speed-up
+    theorem; it is an argument, not a computation.
+- id: fourteen-fail
+  kind: interpretation
+  passage: 'The ablation can also be run: the fourteen configurations the lattice predicts should fail
+    should fail, and the two it predicts should run should reach the predicted throughput.'
+  rationale: 16 subsets (/lattice/supported/n_subsets) minus 2 viable (/lattice/supported/n_viable) leaves
+    fourteen predicted failures; the count is derived from stored fields.
+- id: invisible-explains
+  kind: interpretation
+  passage: This explains why a machine's practical capability can remain unchanged for years while the
+    literature reports steady progress.
+  rationale: Interpretive reading of the invisible-share result for the gap between reported progress
+    and experienced capability.
+- id: old-new
+  kind: interpretation
+  passage: Old hardware with new software outperforms new hardware with old software only on problems
+    initially far out of reach for both.
+  rationale: Summarises the overtaking comparison across the three regimes; holds within the calibrated
+    model only.
+- id: preservation
+  kind: interpretation
+  passage: Preserving a computational capability is therefore far more demanding than preserving a working
+    device.
+  rationale: Conclusion drawn from the 41- and 201-year component lives against the 27.8-year interval.
+- id: deployment-extensibility
+  kind: interpretation
+  passage: The console demonstrates extensibility of deployment; development cost per use falls only when
+    amortised over many deployments, which is a separate claim.
+  rationale: Scopes the result to deployment cost, distinguishing it from the cost of training the parameters
+    elsewhere.
+- id: closing
+  kind: interpretation
+  passage: A statement that a machine can perform a task is a statement about a machine, an artifact,
+    a task, a budget, a quality threshold and a date.
+  rationale: 'The paper''s thesis restated: capability claims are relative to artifact, task, budget,
+    threshold and date.'
+runs:
+- id: extensibility
+  required: true
+  record: verification/extensibility.json

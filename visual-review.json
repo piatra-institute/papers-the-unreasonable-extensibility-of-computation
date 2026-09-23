@@ -1,6 +1,6 @@
 {
-  "pdf_sha256": "896f69abfeb6522182840b9fec6ca4f9c939196085387e193b2c53991d29c7ba",
-  "page_count": 12,
+  "pdf_sha256": "404223451307e69959f2ab0600d6f46d919beb19bc4b1f41ff096c611119531b",
+  "page_count": 13,
   "pages_inspected": [
     1,
     2,
@@ -13,8 +13,9 @@
     9,
     10,
     11,
-    12
+    12,
+    13
   ],
   "all_pages_inspected": true,
-  "notes": "All twelve pages of the rebuilt PDF were read at full size. Title, abstract and eight body sections set correctly; running head and pagination are continuous; the two displayed set expressions render correctly. All three figures were regenerated with descriptive panel titles and plain annotations. Figure 2(b) had overlapping x-axis labels, the automatic log-scale minor labels ('3 x 10^0', '4 x 10^0', '6 x 10^0') printing over the '2x', '5x', '20x' ticks; minor tick labels are now suppressed. Figure 2(c) now states the overtaking time as 25.4 years. Figures were inspected as source images and in page context on pages 5, 7 and 9. The inline-formatted bibliography runs pages 10 to 12. No overfull lines, clipped figures or orphaned headings. Metadata-only rebuild: the web blurb in metadata.yaml, a hashed build input, changed, so the PDF was re-rendered (cba44df2f41d to 896f69abfeb6); the rendered text is byte-for-byte identical and no page was re-inspected."
+  "notes": "All 13 pages inspected after the migration; citations and the citeproc reference list render correctly, no unresolved keys. Metadata-only rebuild: the web blurb in metadata.yaml, a hashed build input, changed, so the PDF was re-rendered (48a6b293744d to 404223451307); the rendered text is byte-for-byte identical and no page was re-inspected."
 }

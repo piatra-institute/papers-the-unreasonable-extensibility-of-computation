@@ -1,0 +1,340 @@
+[
+ {
+  "id": "aaronson2013",
+  "families": [
+   "Aaronson"
+  ],
+  "authors_text": "Aaronson, S.",
+  "year": "2013",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "blum1967",
+  "families": [
+   "Blum"
+  ],
+  "authors_text": "Blum, M.",
+  "year": "1967",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "denning2017",
+  "families": [
+   "Denning",
+   "Lewis"
+  ],
+  "authors_text": "Denning, P. J., and Lewis, T. G.",
+  "year": "2017",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "erdil2022",
+  "families": [
+   "Erdil",
+   "Besiroglu"
+  ],
+  "authors_text": "Erdil, E., and Besiroglu, T.",
+  "year": "2022",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "frantar2022",
+  "families": [
+   "Frantar",
+   "Alistarh"
+  ],
+  "authors_text": "Frantar, E., and Alistarh, D.",
+  "year": "2022",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "gu2023",
+  "families": [
+   "Gu",
+   "Dao"
+  ],
+  "authors_text": "Gu, A., and Dao, T.",
+  "year": "2023",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "guttenbrunner2012",
+  "families": [
+   "Guttenbrunner",
+   "Rauber"
+  ],
+  "authors_text": "Guttenbrunner, M., and Rauber, A.",
+  "year": "2012",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "halevy2009",
+  "families": [
+   "Halevy",
+   "Norvig",
+   "Pereira"
+  ],
+  "authors_text": "Halevy, A., Norvig, P., and Pereira, F.",
+  "year": "2009",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "hartmanis1965",
+  "families": [
+   "Hartmanis",
+   "Stearns"
+  ],
+  "authors_text": "Hartmanis, J., and Stearns, R. E.",
+  "year": "1965",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "hennessy2019",
+  "families": [
+   "Hennessy",
+   "Patterson"
+  ],
+  "authors_text": "Hennessy, J. L., and Patterson, D. A.",
+  "year": "2019",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "hernandez2020",
+  "families": [
+   "Hernandez",
+   "Brown"
+  ],
+  "authors_text": "Hernandez, D., and Brown, T. B.",
+  "year": "2020",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "ho2024",
+  "families": [
+   "Ho",
+   "Besiroglu",
+   "Erdil",
+   "Owen",
+   "Rahman",
+   "Guo",
+   "Atkinson",
+   "Thompson",
+   "Sevilla"
+  ],
+  "authors_text": "Ho, A., Besiroglu, T., Erdil, E., Owen, D., Rahman, R., Guo, Z. C., Atkinson, D., Thompson, N., and Sevilla, J.",
+  "year": "2024",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "hooker2021",
+  "families": [
+   "Hooker"
+  ],
+  "authors_text": "Hooker, S.",
+  "year": "2021",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "hutter2002",
+  "families": [
+   "Hutter"
+  ],
+  "authors_text": "Hutter, M.",
+  "year": "2002",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "jacob2018",
+  "families": [
+   "Jacob",
+   "Kligys",
+   "Chen",
+   "Zhu",
+   "Tang",
+   "Howard",
+   "Adam",
+   "Kalenichenko"
+  ],
+  "authors_text": "Jacob, B., Kligys, S., Chen, B., Zhu, M., Tang, M., Howard, A., Adam, H., and Kalenichenko, D.",
+  "year": "2018",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "koch2022",
+  "families": [
+   "Koch",
+   "Berthold",
+   "Pedersen",
+   "Vanaret"
+  ],
+  "authors_text": "Koch, T., Berthold, T., Pedersen, J., and Vanaret, C.",
+  "year": "2022",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "landauer1961",
+  "families": [
+   "Landauer"
+  ],
+  "authors_text": "Landauer, R.",
+  "year": "1961",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "leiserson2020",
+  "families": [
+   "Leiserson",
+   "Thompson",
+   "Emer",
+   "Kuszmaul",
+   "Lampson",
+   "Sanchez",
+   "Schardl"
+  ],
+  "authors_text": "Leiserson, C. E., Thompson, N. C., Emer, J. S., Kuszmaul, B. C., Lampson, B. W., Sanchez, D., and Schardl, T. B.",
+  "year": "2020",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "li2019",
+  "families": [
+   "Li",
+   "Vitányi"
+  ],
+  "authors_text": "Li, M., and Vitányi, P.",
+  "year": "2019",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "massalin1987",
+  "families": [
+   "Massalin"
+  ],
+  "authors_text": "Massalin, H.",
+  "year": "1987",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "moor1985",
+  "families": [
+   "Moor"
+  ],
+  "authors_text": "Moor, J. H.",
+  "year": "1985",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "moore2006",
+  "families": [
+   "Moore"
+  ],
+  "authors_text": "Moore, G. E.",
+  "year": "2006",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "piccinini2007",
+  "families": [
+   "Piccinini"
+  ],
+  "authors_text": "Piccinini, G.",
+  "year": "2007",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "piccinini2008",
+  "families": [
+   "Piccinini"
+  ],
+  "authors_text": "Piccinini, G.",
+  "year": "2008",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "rice1953",
+  "families": [
+   "Rice"
+  ],
+  "authors_text": "Rice, H. G.",
+  "year": "1953",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "rosenthal2005",
+  "families": [
+   "Rosenthal",
+   "Robertson",
+   "Lipkis",
+   "Reich",
+   "Morabito"
+  ],
+  "authors_text": "Rosenthal, D. S. H., Robertson, T., Lipkis, T., Reich, V., and Morabito, S.",
+  "year": "2005",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "rothenberg1995",
+  "families": [
+   "Rothenberg"
+  ],
+  "authors_text": "Rothenberg, J.",
+  "year": "1995",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "sherry2021",
+  "families": [
+   "Sherry",
+   "Thompson"
+  ],
+  "authors_text": "Sherry, Y., and Thompson, N. C.",
+  "year": "2021",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "technology2026",
+  "families": [
+   "Technology Innovation Institute"
+  ],
+  "authors_text": "Technology Innovation Institute",
+  "year": "2026",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "thatblend2026",
+  "families": [
+   "Thatblend"
+  ],
+  "authors_text": "Thatblend",
+  "year": "2026",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "turing1937",
+  "families": [
+   "Turing"
+  ],
+  "authors_text": "Turing, A. M.",
+  "year": "1937",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "wigner1960",
+  "families": [
+   "Wigner"
+  ],
+  "authors_text": "Wigner, E. P.",
+  "year": "1960",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "wolpert1997",
+  "families": [
+   "Wolpert",
+   "Macready"
+  ],
+  "authors_text": "Wolpert, D. H., and Macready, W. G.",
+  "year": "1997",
+  "status": "VERIFIED-CROSSREF"
+ }
+]
